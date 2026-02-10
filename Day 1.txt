@@ -1,0 +1,78 @@
+Getting started with Django:
+
+1.Introdution Django
+2.Download Pycharm
+3.Download Python
+4.Setup Pycharm with Django
+5. Create sample  project
+
+Introdution:
+
+Django is a Python web framework used to build websites and web applications quickly and securely.
+Examples of what you can build with Django:
+
+Websites (blogs, portfolios)
+Admin panels
+E-commerce sites
+APIs
+Social media–style apps
+
+Main advantages:
+
+Very fast to develop
+Built-in admin panel
+Secure (protects against common attacks)
+Scalable (used by big websites)
+Uses Python (easy to read & learn)
+
+How Django works:
+
+Browser → URL → View → Model → Template → Browser
+
+Django Architecture (MVT):
+
+1.Model
+2.view
+3.Template
+
+Create a Django Project (from PyCharm):
+
+Step 1: Open PyCharm:
+
+ →Open PyCharm
+ →Click New Project
+ →Project name: Internship Project
+ →click create
+
+Step 2: Install Django:
+
+Open Terminal inside PyCharm
+→pip install django
+→django-admin --version
+
+Step 3: Create Django Project:
+
+In the PyCharm terminal:
+
+django-admin startproject mysite
+cd mysite
+
+structure:
+mydjangoapp/
+ └── mysite/
+     ├── manage.py
+     └── mysite/
+         ├── __init__.py
+         ├── settings.py
+         ├── urls.py
+         ├── asgi.py
+         └── wsgi.py
+
+Step 4: Run the Django Server:
+
+Now open my browser and Paste it this url and click Enter:
+
+ http://127.0.0.1:8000/
+I will see the Django welcome page — that means it’s working!
+
+
