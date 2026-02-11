@@ -1,0 +1,71 @@
+
+Step-1: Create a Simple App:
+
+Stop the server (Ctrl + C) and run:
+-python manage.py startapp hello
+ it is mysite in creating a hello file and run it
+
+structure includes:
+hello/
+ ├── admin.py
+ ├── apps.py
+ ├── models.py
+ ├── tests.py
+ └── views.py
+
+Step-2: Register the App:
+
+open myiste and in mysite and double click on the settings.py
+Find and INSTALLED_APPS and add: or write this code 
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'hello',   # 👈 add this
+]
+
+
+Step-3: write a simple view:
+
+ now open hello file and in hello file open views.py
+ and write this code
+
+Code:
+ 
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Hello, Django! Running from PyCharm ")
+
+Step-4: Connect URL to View:
+ 
+ Now Edit mysite in mysite and click on the urls.py
+ and write this code here:
+
+from django.contrib import admin
+from django.urls import path
+from hello.views import home
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', home),   # homepage
+]
+
+
+Step-5: Run Server Again: 
+
+open the Pycharm terminal and paste this
+ python manage.py runserver
+
+Then Click Enter
+
+and after run the terminal they give one url  like this http://127.0.0.1:8000/
+ and open browser paste it this url and click enter, they give this message
+
+-Hello, Django! Running from PyCharm 🚀
+
+
