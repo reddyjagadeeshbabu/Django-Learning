@@ -1,0 +1,37 @@
+Day-3
+
+
+Creating the Polls app:
+
+Now go to pycharm and open the project like Internship Project.
+- open myproject folder and in myporject folder now creating name with Polls and it is a package.
+- now open pycharm terminla and rum this command (python manage.py startapp polls) an dnow structure like this
+
+
+That’ll create a directory polls, which is laid out like this:
+
+polls/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    views.py
+
+This directory structure will house the poll application.
+
+Step-1: write ypur fist view:
+
+Let’s write the first view. Open the file polls/views.py and put the following Python code in it:
+
+
+from django.http import HttpResponse
+
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
+
+
+-This is the most basic view possible in Django. To access it in a browser, we need to map it to a URL - and for this we need to define a URL configuration, or “URLconf” for short. These URL configurations are defined inside each Django app, and they are Python files named urls.py.
